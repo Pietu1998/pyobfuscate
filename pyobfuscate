@@ -70,10 +70,10 @@ class NameTranslator:
         
 
     def gen_name():
-        chars = ('\u006f','\u03bf','\u043e')
+        chars = ('o',unichr(0x3bf).encode('utf-8'),unichr(0x43e).encode('utf-8'))
         # Name must'nt begin with a number
         result = random.choice(chars[:2])
-        for x in range(random.randint(1, 12)):
+        for x in range(12):
             result += random.choice(chars)
         return result
     gen_name = staticmethod(gen_name)
