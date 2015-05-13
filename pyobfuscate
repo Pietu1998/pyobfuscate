@@ -70,13 +70,7 @@ class NameTranslator:
         
 
     def gen_name():
-        if random.choice((True, False)):
-            # Type ilII1ili1Ilil1il1Ilili1
-            chars = ("i", "I", "1")
-        else:
-            # Type oooOo0oOo00oOO0o0O0
-            chars = ("o", "O", "0")
-
+        chars = ('\u006f','\u03bf','\u043e')
         # Name must'nt begin with a number
         result = random.choice(chars[:2])
         for x in range(random.randint(1, 12)):
